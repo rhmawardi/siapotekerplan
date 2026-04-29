@@ -34,7 +34,6 @@
     overflow-x: hidden;
   }
 
-  /* BACKGROUND MESH */
   body::before {
     content: '';
     position: fixed;
@@ -69,11 +68,7 @@
     gap: 16px;
   }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
+  .brand { display: flex; align-items: center; gap: 14px; }
 
   .brand-avatar {
     width: 46px; height: 46px;
@@ -91,12 +86,7 @@
     letter-spacing: -0.5px;
   }
 
-  .brand-sub {
-    font-size: 12px;
-    color: var(--teal);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
+  .brand-sub { font-size: 12px; color: var(--teal); font-weight: 500; letter-spacing: 0.5px; }
 
   .comeback-badge {
     background: linear-gradient(135deg, rgba(0,229,192,0.15), rgba(54,217,255,0.1));
@@ -116,7 +106,7 @@
     50% { box-shadow: 0 0 0 6px rgba(0,229,192,0); }
   }
 
-  /* STATS ROW */
+  /* STATS */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -145,28 +135,12 @@
     background: radial-gradient(circle, rgba(0,229,192,0.08), transparent 70%);
   }
 
-  .stat-label {
-    font-size: 11px;
-    color: var(--text3);
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .stat-val {
-    font-family: 'Sora', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
+  .stat-label { font-size: 11px; color: var(--text3); font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 8px; }
+  .stat-val { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 4px; }
   .stat-val span { color: var(--teal); font-size: 14px; }
   .stat-sub { font-size: 11px; color: var(--text3); }
 
-  /* PROGRESS SECTION */
+  /* PROGRESS */
   .section { padding: 28px 0; border-bottom: 1px solid var(--border); }
   .section-title {
     font-family: 'Sora', sans-serif;
@@ -180,12 +154,7 @@
     align-items: center;
     gap: 8px;
   }
-  .section-title::before {
-    content: '';
-    width: 3px; height: 14px;
-    background: var(--teal);
-    border-radius: 2px;
-  }
+  .section-title::before { content: ''; width: 3px; height: 14px; background: var(--teal); border-radius: 2px; }
 
   .progress-block {
     background: var(--surface);
@@ -203,134 +172,37 @@
     gap: 8px;
   }
 
-  .progress-count {
-    font-family: 'Sora', sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--teal);
-    line-height: 1;
-  }
+  .progress-count { font-family: 'Sora', sans-serif; font-size: 36px; font-weight: 800; color: var(--teal); line-height: 1; }
+  .progress-count span { font-size: 18px; color: var(--text3); font-weight: 400; }
+  .progress-pct { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); }
 
-  .progress-count span {
-    font-size: 18px;
-    color: var(--text3);
-    font-weight: 400;
-  }
+  .progress-bar-track { height: 8px; background: var(--surface3); border-radius: 100px; overflow: hidden; margin-bottom: 16px; }
+  .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--cyan)); border-radius: 100px; transition: width 0.6s cubic-bezier(.4,0,.2,1); width: 0%; }
 
-  .progress-pct {
-    font-family: 'Sora', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  .progress-bar-track {
-    height: 8px;
-    background: var(--surface3);
-    border-radius: 100px;
-    overflow: hidden;
-    margin-bottom: 16px;
-  }
-
-  .progress-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--teal), var(--cyan));
-    border-radius: 100px;
-    transition: width 0.6s cubic-bezier(.4,0,.2,1);
-    width: 0%;
-  }
-
-  .month-mini-bars {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-
+  .month-mini-bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .mini-bar-item { font-size: 12px; color: var(--text2); }
   .mini-bar-label { margin-bottom: 5px; display: flex; justify-content: space-between; }
-  .mini-bar-track {
-    height: 4px; background: var(--surface3); border-radius: 10px; overflow: hidden;
-  }
-  .mini-bar-fill {
-    height: 100%; border-radius: 10px;
-    transition: width 0.5s ease;
-  }
+  .mini-bar-track { height: 4px; background: var(--surface3); border-radius: 10px; overflow: hidden; }
+  .mini-bar-fill { height: 100%; border-radius: 10px; transition: width 0.5s ease; }
   .mini-bar-fill.may { background: var(--teal); }
   .mini-bar-fill.june { background: var(--cyan); }
   .mini-bar-fill.july { background: var(--purple); }
 
   /* TOP CONTENT */
-  .top-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 12px;
-  }
-
-  .top-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-
+  .top-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .top-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; position: relative; overflow: hidden; transition: transform 0.2s; }
   .top-card:hover { transform: translateY(-2px); }
-
-  .top-rank {
-    font-family: 'Sora', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--text3);
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-
+  .top-rank { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; color: var(--text3); letter-spacing: 1px; margin-bottom: 8px; }
   .top-rank.gold { color: #f5b731; }
   .top-rank.silver { color: #9ba8b8; }
   .top-rank.bronze { color: #cd7c3a; }
-
-  .top-title {
-    font-family: 'Sora', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.4;
-    margin-bottom: 12px;
-  }
-
-  .top-views {
-    font-family: 'Sora', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--teal);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .top-metrics {
-    display: flex;
-    gap: 10px;
-    font-size: 11px;
-    color: var(--text3);
-  }
-
-  .metric-pill {
-    background: var(--surface2);
-    border-radius: 6px;
-    padding: 2px 7px;
-  }
+  .top-title { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 12px; }
+  .top-views { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 800; color: var(--teal); line-height: 1; margin-bottom: 4px; }
+  .top-metrics { display: flex; gap: 10px; font-size: 11px; color: var(--text3); }
+  .metric-pill { background: var(--surface2); border-radius: 6px; padding: 2px 7px; }
 
   /* FILTERS */
-  .filters-bar {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-    align-items: center;
-  }
-
+  .filters-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; align-items: center; }
   .filter-btn {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -343,168 +215,38 @@
     transition: all 0.2s;
     font-weight: 500;
   }
-
-  .filter-btn:hover, .filter-btn.active {
-    background: rgba(0,229,192,0.1);
-    border-color: var(--teal);
-    color: var(--teal);
-  }
+  .filter-btn:hover, .filter-btn.active { background: rgba(0,229,192,0.1); border-color: var(--teal); color: var(--teal); }
 
   /* MONTH TABS */
-  .month-tabs {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 24px;
-    background: var(--surface);
-    padding: 4px;
-    border-radius: 14px;
-    width: fit-content;
-    border: 1px solid var(--border);
-  }
-
-  .month-tab {
-    padding: 9px 24px;
-    border-radius: 10px;
-    font-family: 'Sora', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    color: var(--text3);
-    border: none;
-    background: none;
-    position: relative;
-  }
-
-  .month-tab.active {
-    background: linear-gradient(135deg, var(--teal2), var(--teal));
-    color: var(--bg);
-  }
-
-  .tab-count {
-    position: absolute;
-    top: 4px; right: 4px;
-    width: 18px; height: 18px;
-    background: rgba(0,229,192,0.25);
-    border-radius: 50%;
-    font-size: 9px;
-    font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--teal);
-  }
-
-  .month-tab.active .tab-count {
-    background: rgba(8,13,20,0.3);
-    color: var(--bg);
-  }
+  .month-tabs { display: flex; gap: 4px; margin-bottom: 24px; background: var(--surface); padding: 4px; border-radius: 14px; width: fit-content; border: 1px solid var(--border); }
+  .month-tab { padding: 9px 24px; border-radius: 10px; font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text3); border: none; background: none; position: relative; }
+  .month-tab.active { background: linear-gradient(135deg, var(--teal2), var(--teal)); color: var(--bg); }
+  .tab-count { position: absolute; top: 4px; right: 4px; width: 18px; height: 18px; background: rgba(0,229,192,0.25); border-radius: 50%; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center; color: var(--teal); }
+  .month-tab.active .tab-count { background: rgba(8,13,20,0.3); color: var(--bg); }
 
   /* CONTENT LIST */
   .content-list { display: flex; flex-direction: column; gap: 8px; }
-
-  .content-item {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
-
-  .content-item:hover {
-    border-color: rgba(0,229,192,0.3);
-    background: var(--surface2);
-  }
-
-  .content-item.done {
-    opacity: 0.5;
-    border-color: rgba(74,222,128,0.3);
-    background: rgba(74,222,128,0.03);
-  }
-
-  .content-item.done .content-title {
-    text-decoration: line-through;
-    color: var(--text3);
-  }
-
+  .content-item { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: center; gap: 16px; transition: all 0.2s; cursor: pointer; }
+  .content-item:hover { border-color: rgba(0,229,192,0.3); background: var(--surface2); }
+  .content-item.done { opacity: 0.5; border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.03); }
+  .content-item.done .content-title { text-decoration: line-through; color: var(--text3); }
   .content-item.hidden { display: none; }
 
-  /* CHECKBOX */
-  .check-box {
-    flex-shrink: 0;
-    width: 22px; height: 22px;
-    border: 2px solid var(--border);
-    border-radius: 7px;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.2s;
-    background: transparent;
-  }
-
+  .check-box { flex-shrink: 0; width: 22px; height: 22px; border: 2px solid var(--border); border-radius: 7px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; background: transparent; }
   .content-item:hover .check-box { border-color: var(--teal); }
-  .content-item.done .check-box {
-    background: var(--green);
-    border-color: var(--green);
-  }
-
-  .check-icon {
-    opacity: 0;
-    transition: opacity 0.2s;
-    color: var(--bg);
-    font-size: 13px;
-  }
-
+  .content-item.done .check-box { background: var(--green); border-color: var(--green); }
+  .check-icon { opacity: 0; transition: opacity 0.2s; color: var(--bg); font-size: 13px; }
   .content-item.done .check-icon { opacity: 1; }
 
-  /* DATE */
-  .date-badge {
-    flex-shrink: 0;
-    width: 44px;
-    text-align: center;
-  }
+  .date-badge { flex-shrink: 0; width: 44px; text-align: center; }
+  .date-day { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: var(--text); line-height: 1; }
+  .date-month { font-size: 10px; color: var(--text3); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
 
-  .date-day {
-    font-family: 'Sora', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1;
-  }
-
-  .date-month {
-    font-size: 10px;
-    color: var(--text3);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-
-  /* CONTENT BODY */
   .content-body { flex: 1; min-width: 0; }
+  .content-title { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 6px; }
+  .content-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
-  .content-title {
-    font-family: 'Sora', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.4;
-    margin-bottom: 6px;
-  }
-
-  .content-tags {
-    display: flex; gap: 6px; flex-wrap: wrap;
-  }
-
-  .tag {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    padding: 3px 9px;
-    border-radius: 50px;
-    border: 1px solid;
-  }
-
+  .tag { font-size: 10px; font-weight: 600; letter-spacing: 0.4px; padding: 3px 9px; border-radius: 50px; border: 1px solid; }
   .tag-obat { color: var(--teal); border-color: rgba(0,229,192,0.3); background: rgba(0,229,192,0.07); }
   .tag-penyakit { color: var(--rose); border-color: rgba(240,95,124,0.3); background: rgba(240,95,124,0.07); }
   .tag-bayi { color: var(--amber); border-color: rgba(245,183,49,0.3); background: rgba(245,183,49,0.07); }
@@ -512,34 +254,13 @@
   .tag-tips { color: var(--cyan); border-color: rgba(54,217,255,0.3); background: rgba(54,217,255,0.07); }
   .tag-organ { color: var(--purple); border-color: rgba(157,122,247,0.3); background: rgba(157,122,247,0.07); }
 
-  .style-badge {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: 50px;
-    background: var(--surface3);
-    color: var(--text3);
-  }
+  .style-badge { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 50px; background: var(--surface3); color: var(--text3); }
 
-  /* DAY NUMBER */
-  .day-num {
-    flex-shrink: 0;
-    width: 28px; height: 28px;
-    background: var(--surface3);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Sora', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--text3);
-  }
-
+  .day-num { flex-shrink: 0; width: 28px; height: 28px; background: var(--surface3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; color: var(--text3); }
   .content-item.done .day-num { background: rgba(74,222,128,0.1); color: var(--green); }
 
   /* SAVE BUTTON */
   .save-btn {
-    position: fixed;
-    bottom: 28px; right: 28px;
     background: linear-gradient(135deg, var(--teal), var(--cyan));
     color: var(--bg);
     border: none;
@@ -554,13 +275,10 @@
     gap: 8px;
     box-shadow: 0 8px 30px rgba(0,229,192,0.3);
     transition: all 0.2s;
-    z-index: 200;
   }
 
-  .save-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0,229,192,0.4);
-  }
+  .save-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,229,192,0.4); }
+  .save-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
   .save-toast {
     position: fixed;
@@ -577,12 +295,9 @@
     transform: translateY(10px);
     transition: all 0.3s;
     pointer-events: none;
+    max-width: 300px;
   }
-
-  .save-toast.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .save-toast.show { opacity: 1; transform: translateY(0); }
 
   /* INSIGHT BOX */
   .insight-box {
@@ -592,72 +307,31 @@
     padding: 20px 24px;
     margin-bottom: 28px;
   }
-
-  .insight-title {
-    font-family: 'Sora', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--teal);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .insight-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-  }
-
-  .insight-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 13px;
-    color: var(--text2);
-    line-height: 1.5;
-  }
-
-  .insight-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--teal);
-    flex-shrink: 0;
-    margin-top: 6px;
-  }
+  .insight-title { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; color: var(--teal); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .insight-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text2); line-height: 1.5; }
+  .insight-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 6px; }
 
   /* SEARCH */
-  .search-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 10px 16px;
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    width: 260px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
+  .search-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; width: 260px; outline: none; transition: border-color 0.2s; }
   .search-box:focus { border-color: var(--teal); }
   .search-box::placeholder { color: var(--text3); }
 
-  .controls-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
+  .controls-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+  .empty-state { text-align: center; padding: 40px; color: var(--text3); font-size: 14px; }
 
-  .empty-state {
-    text-align: center;
-    padding: 40px;
-    color: var(--text3);
-    font-size: 14px;
+  /* INFO BANNER */
+  .info-banner {
+    background: rgba(54,217,255,0.06);
+    border: 1px solid rgba(54,217,255,0.2);
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 12px;
+    color: var(--text2);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   @media (max-width: 640px) {
@@ -694,7 +368,7 @@
     <div class="stat-card">
       <div class="stat-label">Total Followers</div>
       <div class="stat-val">105K</div>
-      <div class="stat-sub">Medical & Health</div>
+      <div class="stat-sub">Medical &amp; Health</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Total Interaksi (30hr)</div>
@@ -713,7 +387,7 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Konten Direncanakan</div>
-      <div class="stat-val">92<span> hari</div>
+      <div class="stat-val">92<span> hari</span></div>
       <div class="stat-sub">1 Mei – 31 Juli</div>
     </div>
     <div class="stat-card">
@@ -739,16 +413,16 @@
       </div>
       <div class="month-mini-bars">
         <div class="mini-bar-item">
-          <div class="mini-bar-label"><span>Mei</span><span id="mayPct">0%</span></div>
-          <div class="mini-bar-track"><div class="mini-bar-fill may" id="mayBar"></div></div>
+          <div class="mini-bar-label"><span>Mei</span><span id="mayPct">0/31</span></div>
+          <div class="mini-bar-track"><div class="mini-bar-fill may" id="mayBar" style="width:0%"></div></div>
         </div>
         <div class="mini-bar-item">
-          <div class="mini-bar-label"><span>Juni</span><span id="junePct">0%</span></div>
-          <div class="mini-bar-track"><div class="mini-bar-fill june" id="juneBar"></div></div>
+          <div class="mini-bar-label"><span>Juni</span><span id="junePct">0/30</span></div>
+          <div class="mini-bar-track"><div class="mini-bar-fill june" id="juneBar" style="width:0%"></div></div>
         </div>
         <div class="mini-bar-item">
-          <div class="mini-bar-label"><span>Juli</span><span id="julyPct">0%</span></div>
-          <div class="mini-bar-track"><div class="mini-bar-fill july" id="julyBar"></div></div>
+          <div class="mini-bar-label"><span>Juli</span><span id="julyPct">0/31</span></div>
+          <div class="mini-bar-track"><div class="mini-bar-fill july" id="julyBar" style="width:0%"></div></div>
         </div>
       </div>
     </div>
@@ -815,12 +489,11 @@
   <div class="section" style="border-bottom:none; padding-bottom: 100px;">
     <div class="section-title">Rencana Konten 92 Hari</div>
 
-    <!-- INSIGHT BOX -->
     <div class="insight-box">
       <div class="insight-title">🧠 Insight dari Data Performa Kamu</div>
       <div class="insight-grid">
         <div class="insight-item"><div class="insight-dot"></div><div>Judul "STOP!" + konten obat = top performer (1.2M views)</div></div>
-        <div class="insight-item"><div class="insight-dot"></div><div>Personifikasi organ ("Kasian Ginjalmu...") sangat emosional & viral</div></div>
+        <div class="insight-item"><div class="insight-dot"></div><div>Personifikasi organ ("Kasian Ginjalmu...") sangat emosional &amp; viral</div></div>
         <div class="insight-item"><div class="insight-dot"></div><div>Storytelling mekanisme obat ("Si Insulin yang Kewalahan") terbukti work</div></div>
         <div class="insight-item"><div class="insight-dot"></div><div>Konten ginjal, diabetes, kolesterol = topik favorit audiens kamu</div></div>
         <div class="insight-item"><div class="insight-dot"></div><div>Non-followers menyumbang 57.3% interaksi = konten kamu sering viral</div></div>
@@ -828,7 +501,11 @@
       </div>
     </div>
 
-    <!-- CONTROLS -->
+    <!-- INFO PENYIMPANAN -->
+    <div class="info-banner" id="storageInfo">
+      ℹ️ <span id="storageInfoText">Memuat progress dari server...</span>
+    </div>
+
     <div class="controls-row">
       <div class="month-tabs">
         <button class="month-tab active" data-month="all">Semua <span class="tab-count">92</span></button>
@@ -839,12 +516,12 @@
       <input class="search-box" type="text" placeholder="🔍  Cari judul konten..." id="searchBox">
     </div>
 
-    <div class="filters-bar" id="filterBar">
+    <div class="filters-bar">
       <span style="font-size:12px;color:var(--text3);font-weight:500;">Filter:</span>
       <button class="filter-btn active" data-cat="all">Semua</button>
       <button class="filter-btn" data-cat="obat">💊 Obat</button>
       <button class="filter-btn" data-cat="penyakit">🫀 Penyakit</button>
-      <button class="filter-btn" data-cat="bayi">👶 Bayi & Ibu</button>
+      <button class="filter-btn" data-cat="bayi">👶 Bayi &amp; Ibu</button>
       <button class="filter-btn" data-cat="suplemen">🌿 Suplemen</button>
       <button class="filter-btn" data-cat="tips">💡 Tips</button>
       <button class="filter-btn" data-cat="organ">🧬 Organ</button>
@@ -858,57 +535,62 @@
 
 </div>
 
-<!-- SAVE BUTTON -->
-<button class="save-btn" id="saveBtn" onclick="saveProgress()">
-  💾 Simpan Progress
-</button>
+<!-- ACTION BUTTONS -->
+<div style="position:fixed;bottom:28px;right:28px;display:flex;flex-direction:column;gap:8px;align-items:flex-end;z-index:200;">
+  <button class="save-btn" style="background:linear-gradient(135deg,#1c2a3a,#243447);color:var(--cyan);border:1px solid rgba(54,217,255,0.3);box-shadow:0 8px 20px rgba(0,0,0,0.3);" onclick="importData()">📂 Import JSON</button>
+  <button class="save-btn" style="background:linear-gradient(135deg,#1c2a3a,#243447);color:var(--teal);border:1px solid rgba(0,229,192,0.3);box-shadow:0 8px 20px rgba(0,0,0,0.3);" onclick="exportData()">📤 Export JSON</button>
+  <button class="save-btn" id="saveBtn" onclick="saveProgress()">💾 Simpan Progress</button>
+</div>
 <div class="save-toast" id="saveToast">✅ Progress tersimpan!</div>
 
 <script>
+// =============================================
+// DATA KONTEN
+// =============================================
 const CONTENT = [
   // ====== MEI (31 hari) ======
-  { day: 1, date: "1 Mei", month: "mei", title: "STOP! Ini Alasan Jangan Pernah Campurkan Dua Obat Ini", cat: "obat", style: "STOP" },
-  { day: 2, date: "2 Mei", month: "mei", title: "Kenapa Ginjalmu Diam-diam Menangis Setiap Hari?", cat: "organ", style: "WHY" },
-  { day: 3, date: "3 Mei", month: "mei", title: "Fakta Mengejutkan: Kolesterol Tidak Selalu Musuh Tubuh", cat: "penyakit", style: "FAKTA" },
-  { day: 4, date: "4 Mei", month: "mei", title: "Cara Minum Obat yang 90% Orang Masih Salah", cat: "tips", style: "TIPS" },
-  { day: 5, date: "5 Mei", month: "mei", title: "Si Paracetamol: Teman Setia yang Sering Disalahgunakan", cat: "obat", style: "STORY" },
-  { day: 6, date: "6 Mei", month: "mei", title: "Kenapa Demam Sebenarnya adalah Temanmu, Bukan Musuh?", cat: "tips", style: "WHY" },
-  { day: 7, date: "7 Mei", month: "mei", title: "STOP! Jangan Pernah Kasih Obat Dewasa untuk Anak", cat: "bayi", style: "STOP" },
-  { day: 8, date: "8 Mei", month: "mei", title: "Kenapa Tekanan Darahmu Berbeda di Pagi dan Malam Hari?", cat: "penyakit", style: "WHY" },
-  { day: 9, date: "9 Mei", month: "mei", title: "Benarkah Vitamin C Dosis Tinggi Bisa Cegah Flu?", cat: "suplemen", style: "FAKTA" },
-  { day: 10, date: "10 Mei", month: "mei", title: "Ginjal: Mesin Filter 24 Jam yang Kamu Abaikan", cat: "organ", style: "STORY" },
-  { day: 11, date: "11 Mei", month: "mei", title: "Kenapa Antibiotik Tidak Mempan untuk Flu dan Batuk Biasa?", cat: "obat", style: "WHY" },
-  { day: 12, date: "12 Mei", month: "mei", title: "Cara Membaca Label Obat yang Benar (Banyak yang Salah!)", cat: "tips", style: "TIPS" },
-  { day: 13, date: "13 Mei", month: "mei", title: "STOP! Jangan Simpan Obat di Kamar Mandi — Ini Alasannya", cat: "obat", style: "STOP" },
-  { day: 14, date: "14 Mei", month: "mei", title: "Kenapa Pasien Diabetes Bisa Sangat Lapar Terus-menerus?", cat: "penyakit", style: "WHY" },
-  { day: 15, date: "15 Mei", month: "mei", title: "Si Insulin: Kunci Kecil yang Membuka Pintu Setiap Sel", cat: "penyakit", style: "STORY" },
-  { day: 16, date: "16 Mei", month: "mei", title: "Fakta: Obat Generik Sama Ampuhnya dengan Obat Paten", cat: "obat", style: "FAKTA" },
-  { day: 17, date: "17 Mei", month: "mei", title: "Kenapa Stres Bisa Bikin Tekanan Darah Tiba-tiba Naik?", cat: "penyakit", style: "WHY" },
-  { day: 18, date: "18 Mei", month: "mei", title: "Tanda-tanda Ginjalmu Minta Bantuan (Jangan Diabaikan!)", cat: "organ", style: "TIPS" },
-  { day: 19, date: "19 Mei", month: "mei", title: "STOP! Jangan Minum Obat Ini Sebelum Berkendara", cat: "obat", style: "STOP" },
-  { day: 20, date: "20 Mei", month: "mei", title: "Kenapa Perempuan Lebih Sering Mengalami Anemia?", cat: "tips", style: "WHY" },
-  { day: 21, date: "21 Mei", month: "mei", title: "Lemak Visceral: Si Diam di Perutmu yang Paling Berbahaya", cat: "penyakit", style: "STORY" },
-  { day: 22, date: "22 Mei", month: "mei", title: "Benarkah Suplemen Vitamin Harus Diminum Setiap Hari?", cat: "suplemen", style: "FAKTA" },
-  { day: 23, date: "23 Mei", month: "mei", title: "Kenapa Bayi Lebih Mudah Sakit dibanding Orang Dewasa?", cat: "bayi", style: "WHY" },
-  { day: 24, date: "24 Mei", month: "mei", title: "STOP! Ini Obat yang Tidak Boleh Dihancurkan atau Dibelah", cat: "obat", style: "STOP" },
-  { day: 25, date: "25 Mei", month: "mei", title: "Kenapa Batuk Kronis Harus Segera Diperiksakan ke Dokter?", cat: "tips", style: "WHY" },
-  { day: 26, date: "26 Mei", month: "mei", title: "Probiotik: Pasukan Khusus yang Menjaga Ususmu", cat: "tips", style: "STORY" },
-  { day: 27, date: "27 Mei", month: "mei", title: "Fakta: Demam Tinggi Tidak Selalu Perlu Obat Penurun Panas", cat: "tips", style: "FAKTA" },
-  { day: 28, date: "28 Mei", month: "mei", title: "Kenapa Asam Folat Wajib Dikonsumsi Ibu Sebelum Hamil?", cat: "bayi", style: "WHY" },
-  { day: 29, date: "29 Mei", month: "mei", title: "Kenapa Kafein Bikin Jantung Deg-degan dan Susah Tidur?", cat: "tips", style: "WHY" },
-  { day: 30, date: "30 Mei", month: "mei", title: "Magnesium: Mineral yang Paling Sering Terlupakan Tubuhmu", cat: "suplemen", style: "STORY" },
-  { day: 31, date: "31 Mei", month: "mei", title: "STOP! Jangan Minum Obat Ini Bareng Teh atau Susu", cat: "obat", style: "STOP" },
+  { day: 1,  date: "1 Mei",  month: "mei",  title: "STOP! Ini Alasan Jangan Pernah Campurkan Dua Obat Ini", cat: "obat", style: "STOP" },
+  { day: 2,  date: "2 Mei",  month: "mei",  title: "Kenapa Ginjalmu Diam-diam Menangis Setiap Hari?", cat: "organ", style: "WHY" },
+  { day: 3,  date: "3 Mei",  month: "mei",  title: "Fakta Mengejutkan: Kolesterol Tidak Selalu Musuh Tubuh", cat: "penyakit", style: "FAKTA" },
+  { day: 4,  date: "4 Mei",  month: "mei",  title: "Cara Minum Obat yang 90% Orang Masih Salah", cat: "tips", style: "TIPS" },
+  { day: 5,  date: "5 Mei",  month: "mei",  title: "Si Paracetamol: Teman Setia yang Sering Disalahgunakan", cat: "obat", style: "STORY" },
+  { day: 6,  date: "6 Mei",  month: "mei",  title: "Kenapa Demam Sebenarnya adalah Temanmu, Bukan Musuh?", cat: "tips", style: "WHY" },
+  { day: 7,  date: "7 Mei",  month: "mei",  title: "STOP! Jangan Pernah Kasih Obat Dewasa untuk Anak", cat: "bayi", style: "STOP" },
+  { day: 8,  date: "8 Mei",  month: "mei",  title: "Kenapa Tekanan Darahmu Berbeda di Pagi dan Malam Hari?", cat: "penyakit", style: "WHY" },
+  { day: 9,  date: "9 Mei",  month: "mei",  title: "Benarkah Vitamin C Dosis Tinggi Bisa Cegah Flu?", cat: "suplemen", style: "FAKTA" },
+  { day: 10, date: "10 Mei", month: "mei",  title: "Ginjal: Mesin Filter 24 Jam yang Kamu Abaikan", cat: "organ", style: "STORY" },
+  { day: 11, date: "11 Mei", month: "mei",  title: "Kenapa Antibiotik Tidak Mempan untuk Flu dan Batuk Biasa?", cat: "obat", style: "WHY" },
+  { day: 12, date: "12 Mei", month: "mei",  title: "Cara Membaca Label Obat yang Benar (Banyak yang Salah!)", cat: "tips", style: "TIPS" },
+  { day: 13, date: "13 Mei", month: "mei",  title: "STOP! Jangan Simpan Obat di Kamar Mandi — Ini Alasannya", cat: "obat", style: "STOP" },
+  { day: 14, date: "14 Mei", month: "mei",  title: "Kenapa Pasien Diabetes Bisa Sangat Lapar Terus-menerus?", cat: "penyakit", style: "WHY" },
+  { day: 15, date: "15 Mei", month: "mei",  title: "Si Insulin: Kunci Kecil yang Membuka Pintu Setiap Sel", cat: "penyakit", style: "STORY" },
+  { day: 16, date: "16 Mei", month: "mei",  title: "Fakta: Obat Generik Sama Ampuhnya dengan Obat Paten", cat: "obat", style: "FAKTA" },
+  { day: 17, date: "17 Mei", month: "mei",  title: "Kenapa Stres Bisa Bikin Tekanan Darah Tiba-tiba Naik?", cat: "penyakit", style: "WHY" },
+  { day: 18, date: "18 Mei", month: "mei",  title: "Tanda-tanda Ginjalmu Minta Bantuan (Jangan Diabaikan!)", cat: "organ", style: "TIPS" },
+  { day: 19, date: "19 Mei", month: "mei",  title: "STOP! Jangan Minum Obat Ini Sebelum Berkendara", cat: "obat", style: "STOP" },
+  { day: 20, date: "20 Mei", month: "mei",  title: "Kenapa Perempuan Lebih Sering Mengalami Anemia?", cat: "tips", style: "WHY" },
+  { day: 21, date: "21 Mei", month: "mei",  title: "Lemak Visceral: Si Diam di Perutmu yang Paling Berbahaya", cat: "penyakit", style: "STORY" },
+  { day: 22, date: "22 Mei", month: "mei",  title: "Benarkah Suplemen Vitamin Harus Diminum Setiap Hari?", cat: "suplemen", style: "FAKTA" },
+  { day: 23, date: "23 Mei", month: "mei",  title: "Kenapa Bayi Lebih Mudah Sakit dibanding Orang Dewasa?", cat: "bayi", style: "WHY" },
+  { day: 24, date: "24 Mei", month: "mei",  title: "STOP! Ini Obat yang Tidak Boleh Dihancurkan atau Dibelah", cat: "obat", style: "STOP" },
+  { day: 25, date: "25 Mei", month: "mei",  title: "Kenapa Batuk Kronis Harus Segera Diperiksakan ke Dokter?", cat: "tips", style: "WHY" },
+  { day: 26, date: "26 Mei", month: "mei",  title: "Probiotik: Pasukan Khusus yang Menjaga Ususmu", cat: "tips", style: "STORY" },
+  { day: 27, date: "27 Mei", month: "mei",  title: "Fakta: Demam Tinggi Tidak Selalu Perlu Obat Penurun Panas", cat: "tips", style: "FAKTA" },
+  { day: 28, date: "28 Mei", month: "mei",  title: "Kenapa Asam Folat Wajib Dikonsumsi Ibu Sebelum Hamil?", cat: "bayi", style: "WHY" },
+  { day: 29, date: "29 Mei", month: "mei",  title: "Kenapa Kafein Bikin Jantung Deg-degan dan Susah Tidur?", cat: "tips", style: "WHY" },
+  { day: 30, date: "30 Mei", month: "mei",  title: "Magnesium: Mineral yang Paling Sering Terlupakan Tubuhmu", cat: "suplemen", style: "STORY" },
+  { day: 31, date: "31 Mei", month: "mei",  title: "STOP! Jangan Minum Obat Ini Bareng Teh atau Susu", cat: "obat", style: "STOP" },
 
   // ====== JUNI (30 hari) ======
-  { day: 32, date: "1 Jun", month: "juni", title: "STOP! Jangan Campurkan Suplemen Ini dengan Obat Jantung", cat: "suplemen", style: "STOP" },
-  { day: 33, date: "2 Jun", month: "juni", title: "Kenapa Kolesterol Jahat Bisa Menyumbat Pembuluh Darah?", cat: "penyakit", style: "WHY" },
-  { day: 34, date: "3 Jun", month: "juni", title: "Hati (Liver): Laboratorium Terbesar di Dalam Tubuhmu", cat: "organ", style: "STORY" },
-  { day: 35, date: "4 Jun", month: "juni", title: "Benarkah Minum Susu Bisa Menetralisir Efek Racun Obat?", cat: "obat", style: "FAKTA" },
-  { day: 36, date: "5 Jun", month: "juni", title: "Kenapa Obat Antidepresan Butuh Waktu Lama untuk Mempan?", cat: "obat", style: "WHY" },
-  { day: 37, date: "6 Jun", month: "juni", title: "5 Cara Menjaga Kesehatan Liver Secara Alami Setiap Hari", cat: "organ", style: "TIPS" },
-  { day: 38, date: "7 Jun", month: "juni", title: "STOP! Ini Bahaya Minum Obat Penghilang Nyeri Terlalu Sering", cat: "obat", style: "STOP" },
-  { day: 39, date: "8 Jun", month: "juni", title: "Kenapa Luka pada Pasien Diabetes Susah Sekali Sembuh?", cat: "penyakit", style: "WHY" },
-  { day: 40, date: "9 Jun", month: "juni", title: "Tiroid: Kondakter Metabolisme yang Sering Tidak Terdeteksi", cat: "organ", style: "STORY" },
+  { day: 32, date: "1 Jun",  month: "juni", title: "STOP! Jangan Campurkan Suplemen Ini dengan Obat Jantung", cat: "suplemen", style: "STOP" },
+  { day: 33, date: "2 Jun",  month: "juni", title: "Kenapa Kolesterol Jahat Bisa Menyumbat Pembuluh Darah?", cat: "penyakit", style: "WHY" },
+  { day: 34, date: "3 Jun",  month: "juni", title: "Hati (Liver): Laboratorium Terbesar di Dalam Tubuhmu", cat: "organ", style: "STORY" },
+  { day: 35, date: "4 Jun",  month: "juni", title: "Benarkah Minum Susu Bisa Menetralisir Efek Racun Obat?", cat: "obat", style: "FAKTA" },
+  { day: 36, date: "5 Jun",  month: "juni", title: "Kenapa Obat Antidepresan Butuh Waktu Lama untuk Mempan?", cat: "obat", style: "WHY" },
+  { day: 37, date: "6 Jun",  month: "juni", title: "5 Cara Menjaga Kesehatan Liver Secara Alami Setiap Hari", cat: "organ", style: "TIPS" },
+  { day: 38, date: "7 Jun",  month: "juni", title: "STOP! Ini Bahaya Minum Obat Penghilang Nyeri Terlalu Sering", cat: "obat", style: "STOP" },
+  { day: 39, date: "8 Jun",  month: "juni", title: "Kenapa Luka pada Pasien Diabetes Susah Sekali Sembuh?", cat: "penyakit", style: "WHY" },
+  { day: 40, date: "9 Jun",  month: "juni", title: "Tiroid: Kondakter Metabolisme yang Sering Tidak Terdeteksi", cat: "organ", style: "STORY" },
   { day: 41, date: "10 Jun", month: "juni", title: "Fakta: Jus Grapefruit Bisa Ubah Drastis Efek Obatmu!", cat: "obat", style: "FAKTA" },
   { day: 42, date: "11 Jun", month: "juni", title: "Kenapa Anak Bisa Kejang Saat Demam Tinggi? Ini Penjelasannya", cat: "bayi", style: "WHY" },
   { day: 43, date: "12 Jun", month: "juni", title: "Omega-3: Lebih Bermanfaat dari Sekedar Minyak Ikan Biasa", cat: "suplemen", style: "STORY" },
@@ -932,15 +614,15 @@ const CONTENT = [
   { day: 61, date: "30 Jun", month: "juni", title: "STOP! Jangan Sembarangan Beli Obat Tetes Mata Online", cat: "obat", style: "STOP" },
 
   // ====== JULI (31 hari) ======
-  { day: 62, date: "1 Jul", month: "juli", title: "Kenapa Efek Samping Obat Maag Jarang Dibahas Dokter?", cat: "obat", style: "WHY" },
-  { day: 63, date: "2 Jul", month: "juli", title: "Si Melatonin: Hormon Tidur yang Paling Banyak Disalahpahami", cat: "tips", style: "STORY" },
-  { day: 64, date: "3 Jul", month: "juli", title: "STOP! Jangan Konsumsi Suplemen Ini Saat Hamil Tanpa Saran Dokter", cat: "bayi", style: "STOP" },
-  { day: 65, date: "4 Jul", month: "juli", title: "Alergi vs Intoleransi Makanan: Beda Banget, Banyak yang Keliru", cat: "penyakit", style: "FAKTA" },
-  { day: 66, date: "5 Jul", month: "juli", title: "Kenapa Perokok Aktif Butuh Dosis Obat yang Lebih Tinggi?", cat: "tips", style: "WHY" },
-  { day: 67, date: "6 Jul", month: "juli", title: "Jantung Sehat = Otak Sehat: Ini Hubungan yang Sering Diabaikan", cat: "organ", style: "STORY" },
-  { day: 68, date: "7 Jul", month: "juli", title: "Kenapa Darah Rendah Juga Bisa Berbahaya, Bukan Hanya Darah Tinggi?", cat: "penyakit", style: "WHY" },
-  { day: 69, date: "8 Jul", month: "juli", title: "Cara Kerja Obat Anti-Nyeri di Dalam Otak (Animasi Detail)", cat: "obat", style: "STORY" },
-  { day: 70, date: "9 Jul", month: "juli", title: "STOP! Obat Ini Sangat Berbahaya Jika Diminum Saat Perut Kosong", cat: "obat", style: "STOP" },
+  { day: 62, date: "1 Jul",  month: "juli", title: "Kenapa Efek Samping Obat Maag Jarang Dibahas Dokter?", cat: "obat", style: "WHY" },
+  { day: 63, date: "2 Jul",  month: "juli", title: "Si Melatonin: Hormon Tidur yang Paling Banyak Disalahpahami", cat: "tips", style: "STORY" },
+  { day: 64, date: "3 Jul",  month: "juli", title: "STOP! Jangan Konsumsi Suplemen Ini Saat Hamil Tanpa Saran Dokter", cat: "bayi", style: "STOP" },
+  { day: 65, date: "4 Jul",  month: "juli", title: "Alergi vs Intoleransi Makanan: Beda Banget, Banyak yang Keliru", cat: "penyakit", style: "FAKTA" },
+  { day: 66, date: "5 Jul",  month: "juli", title: "Kenapa Perokok Aktif Butuh Dosis Obat yang Lebih Tinggi?", cat: "tips", style: "WHY" },
+  { day: 67, date: "6 Jul",  month: "juli", title: "Jantung Sehat = Otak Sehat: Ini Hubungan yang Sering Diabaikan", cat: "organ", style: "STORY" },
+  { day: 68, date: "7 Jul",  month: "juli", title: "Kenapa Darah Rendah Juga Bisa Berbahaya, Bukan Hanya Darah Tinggi?", cat: "penyakit", style: "WHY" },
+  { day: 69, date: "8 Jul",  month: "juli", title: "Cara Kerja Obat Anti-Nyeri di Dalam Otak (Animasi Detail)", cat: "obat", style: "STORY" },
+  { day: 70, date: "9 Jul",  month: "juli", title: "STOP! Obat Ini Sangat Berbahaya Jika Diminum Saat Perut Kosong", cat: "obat", style: "STOP" },
   { day: 71, date: "10 Jul", month: "juli", title: "Protein: Bukan Cuma untuk Binaragawan, Ini Fungsi Sebenarnya", cat: "tips", style: "FAKTA" },
   { day: 72, date: "11 Jul", month: "juli", title: "Benarkah Obat Batuk Bisa Bikin Anak Susah Tidur di Malam Hari?", cat: "bayi", style: "FAKTA" },
   { day: 73, date: "12 Jul", month: "juli", title: "Kenapa Hemoglobin Rendah Bikin Badan Sangat Cepat Lelah?", cat: "tips", style: "WHY" },
@@ -966,124 +648,225 @@ const CONTENT = [
 ];
 
 const CAT_LABELS = {
-  obat: { label: "💊 Obat", cls: "tag-obat" },
-  penyakit: { label: "🫀 Penyakit", cls: "tag-penyakit" },
-  bayi: { label: "👶 Bayi & Ibu", cls: "tag-bayi" },
-  suplemen: { label: "🌿 Suplemen", cls: "tag-suplemen" },
-  tips: { label: "💡 Tips", cls: "tag-tips" },
-  organ: { label: "🧬 Organ", cls: "tag-organ" },
+  obat:     { label: "💊 Obat",      cls: "tag-obat" },
+  penyakit: { label: "🫀 Penyakit",  cls: "tag-penyakit" },
+  bayi:     { label: "👶 Bayi & Ibu",cls: "tag-bayi" },
+  suplemen: { label: "🌿 Suplemen",  cls: "tag-suplemen" },
+  tips:     { label: "💡 Tips",      cls: "tag-tips" },
+  organ:    { label: "🧬 Organ",     cls: "tag-organ" },
 };
 
 const STYLE_LABELS = {
-  STOP: "🚫 STOP!",
-  WHY: "❓ Kenapa",
+  STOP:  "🚫 STOP!",
+  WHY:   "❓ Kenapa",
   STORY: "📖 Storytelling",
   FAKTA: "💡 Fakta",
-  TIPS: "📋 Tips",
+  TIPS:  "📋 Tips",
   RECAP: "🎉 Recap",
 };
 
-let checked = new Set();
-let activeMonth = "all";
-let activeCat = "all";
-let searchQuery = "";
-let isSaving = false;
+// =============================================
+// STATE
+// =============================================
+let checked      = new Set();
+let activeMonth  = "all";
+let activeCat    = "all";
+let searchQuery  = "";
+let useServer    = false;   // apakah save_progress.php tersedia?
 
-async function loadFromStorage() {
+const SAVE_URL   = "save_progress.php";
+const LOAD_URL   = "progress.json";
+const LS_KEY     = "siapoteker_checked";
+
+// =============================================
+// LOAD PROGRESS (server → localStorage fallback)
+// =============================================
+async function loadProgress() {
+  const infoEl = document.getElementById("storageInfoText");
+
   try {
-    const result = await window.storage.get("siapoteker_checked");
-    if (result && result.value) {
-      checked = new Set(JSON.parse(result.value));
+    const res  = await fetch(LOAD_URL + "?t=" + Date.now());
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+
+    if (data.checked && Array.isArray(data.checked)) {
+      checked    = new Set(data.checked);
+      useServer  = true;
+      const ts   = data.updated ? " · " + new Date(data.updated).toLocaleString("id-ID") : "";
+      infoEl.textContent = "✅ Progress dimuat dari server (progress.json)" + ts;
+    } else {
+      throw new Error("Format tidak valid");
     }
-  } catch(e) {
-    // Key not found or error — start fresh
-    checked = new Set();
+  } catch (err) {
+    // Fallback ke localStorage
+    try {
+      const saved = localStorage.getItem(LS_KEY);
+      if (saved) checked = new Set(JSON.parse(saved));
+    } catch(e) { checked = new Set(); }
+
+    useServer  = false;
+    infoEl.textContent = "⚠️ Server tidak tersedia — menggunakan localStorage (export JSON untuk backup)";
   }
+
+  renderList();
+  updateProgress();
 }
 
+// =============================================
+// SAVE PROGRESS (server → localStorage fallback)
+// =============================================
 async function saveProgress() {
-  if (isSaving) return;
-  isSaving = true;
   const btn = document.getElementById("saveBtn");
+  btn.disabled = true;
   btn.textContent = "⏳ Menyimpan...";
-  btn.style.opacity = "0.7";
-  try {
-    await window.storage.set("siapoteker_checked", JSON.stringify([...checked]));
-    const toast = document.getElementById("saveToast");
-    toast.classList.add("show");
-    setTimeout(() => toast.classList.remove("show"), 2500);
-  } catch(e) {
-    const toast = document.getElementById("saveToast");
-    toast.textContent = "❌ Gagal menyimpan, coba lagi";
-    toast.style.borderColor = "var(--rose)";
-    toast.style.color = "var(--rose)";
-    toast.classList.add("show");
-    setTimeout(() => {
-      toast.classList.remove("show");
-      toast.textContent = "✅ Progress tersimpan!";
-      toast.style.borderColor = "var(--green)";
-      toast.style.color = "var(--green)";
-    }, 2500);
-  } finally {
-    isSaving = false;
-    btn.innerHTML = "💾 Simpan Progress";
-    btn.style.opacity = "1";
+
+  // Selalu simpan ke localStorage sebagai backup
+  try { localStorage.setItem(LS_KEY, JSON.stringify([...checked])); } catch(e) {}
+
+  if (useServer) {
+    try {
+      const res = await fetch(SAVE_URL, {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ checked: [...checked] }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        showToast("✅ Tersimpan ke server! (" + data.saved + " konten)", "var(--green)", "var(--green)");
+      } else {
+        throw new Error(data.error || "Unknown error");
+      }
+    } catch (err) {
+      showToast("⚠️ Server error — tersimpan di localStorage", "var(--amber)", "var(--amber)");
+    }
+  } else {
+    showToast("💾 Tersimpan di localStorage (server tidak aktif)", "var(--cyan)", "var(--cyan)");
   }
+
+  btn.disabled = false;
+  btn.innerHTML = "💾 Simpan Progress";
 }
 
-// Auto-save every 30s
-setInterval(saveProgress, 30000);
+// =============================================
+// EXPORT / IMPORT JSON
+// =============================================
+function exportData() {
+  const data = { version: 1, exported: new Date().toISOString(), checked: [...checked] };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const a    = document.createElement("a");
+  a.href     = URL.createObjectURL(blob);
+  a.download = "siapoteker_progress.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+  showToast("📥 File berhasil diunduh!", "var(--cyan)", "var(--cyan)");
+}
 
-async function toggleItem(day) {
+function importData() {
+  const input    = document.createElement("input");
+  input.type     = "file";
+  input.accept   = ".json";
+  input.onchange = e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (data.checked && Array.isArray(data.checked)) {
+          checked = new Set(data.checked);
+          saveProgress();
+          renderList();
+          updateProgress();
+          showToast("✅ Data berhasil diimpor!", "var(--green)", "var(--green)");
+        } else {
+          showToast("❌ Format file tidak valid!", "var(--rose)", "var(--rose)");
+        }
+      } catch {
+        showToast("❌ File rusak atau tidak valid!", "var(--rose)", "var(--rose)");
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+// =============================================
+// TOAST
+// =============================================
+function showToast(msg, color, border) {
+  const toast      = document.getElementById("saveToast");
+  toast.textContent = msg;
+  toast.style.color       = color;
+  toast.style.borderColor = border;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 3000);
+}
+
+// =============================================
+// AUTO-SAVE setiap 60 detik
+// =============================================
+setInterval(saveProgress, 60000);
+
+// =============================================
+// TOGGLE ITEM
+// =============================================
+function toggleItem(day) {
   if (checked.has(day)) checked.delete(day);
   else checked.add(day);
   renderList();
   updateProgress();
-  await saveProgress();
+  saveProgress();
 }
 
+// =============================================
+// UPDATE PROGRESS BAR
+// =============================================
 function updateProgress() {
   const total = CONTENT.length;
-  const done = checked.size;
-  const pct = total ? Math.round(done / total * 100) : 0;
+  const done  = checked.size;
+  const pct   = total ? Math.round(done / total * 100) : 0;
 
   document.getElementById("doneCount").innerHTML = `${done} <span>/ ${total} konten</span>`;
-  document.getElementById("donePct").textContent = `${pct}%`;
+  document.getElementById("donePct").textContent = pct + "%";
   document.getElementById("mainProgressBar").style.width = pct + "%";
 
   const months = ["mei","juni","juli"];
   const totals = [31, 30, 31];
-  const ids = [["mayPct","mayBar"], ["junePct","juneBar"], ["julyPct","julyBar"]];
+  const ids    = [["mayPct","mayBar"], ["junePct","juneBar"], ["julyPct","julyBar"]];
 
   months.forEach((m, i) => {
-    const monthItems = CONTENT.filter(c => c.month === m);
-    const monthDone = monthItems.filter(c => checked.has(c.day)).length;
-    const mp = totals[i] ? Math.round(monthDone / totals[i] * 100) : 0;
-    document.getElementById(ids[i][0]).textContent = `${monthDone}/${totals[i]}`;
-    document.getElementById(ids[i][1]).style.width = mp + "%";
+    const items    = CONTENT.filter(c => c.month === m);
+    const doneM    = items.filter(c => checked.has(c.day)).length;
+    const mp       = totals[i] ? Math.round(doneM / totals[i] * 100) : 0;
+    document.getElementById(ids[i][0]).textContent = `${doneM}/${totals[i]}`;
+    document.getElementById(ids[i][1]).style.width  = mp + "%";
   });
 }
 
+// =============================================
+// RENDER LIST
+// =============================================
 function renderList() {
   const list = document.getElementById("contentList");
   list.innerHTML = "";
   let visible = 0;
 
   CONTENT.forEach(item => {
-    const isDone = checked.has(item.day);
-    const monthMatch = activeMonth === "all" || item.month === activeMonth;
-    const catMatch = activeCat === "all" ||
-      activeCat === item.cat ||
-      (activeCat === "done" && isDone) ||
-      (activeCat === "todo" && !isDone);
-    const q = searchQuery.trim().toLowerCase();
+    const isDone      = checked.has(item.day);
+    const monthMatch  = activeMonth === "all" || item.month === activeMonth;
+    const catMatch    = activeCat === "all"
+      || activeCat === item.cat
+      || (activeCat === "done" && isDone)
+      || (activeCat === "todo" && !isDone);
+    const q           = searchQuery.trim().toLowerCase();
     const searchMatch = !q || item.title.toLowerCase().includes(q);
+    const show        = monthMatch && catMatch && searchMatch;
 
-    const el = document.createElement("div");
-    el.className = "content-item" + (isDone ? " done" : "") + (!monthMatch || !catMatch || !searchMatch ? " hidden" : "");
-    if (monthMatch && catMatch && searchMatch) visible++;
+    if (show) visible++;
 
-    const cat = CAT_LABELS[item.cat] || { label: item.cat, cls: "" };
+    const el      = document.createElement("div");
+    el.className  = "content-item" + (isDone ? " done" : "") + (!show ? " hidden" : "");
+    const cat     = CAT_LABELS[item.cat] || { label: item.cat, cls: "" };
 
     el.innerHTML = `
       <div class="check-box"><span class="check-icon">✓</span></div>
@@ -1108,7 +891,9 @@ function renderList() {
   document.getElementById("emptyState").style.display = visible === 0 ? "block" : "none";
 }
 
-// Month tabs
+// =============================================
+// EVENT LISTENERS
+// =============================================
 document.querySelectorAll(".month-tab").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".month-tab").forEach(b => b.classList.remove("active"));
@@ -1118,7 +903,6 @@ document.querySelectorAll(".month-tab").forEach(btn => {
   });
 });
 
-// Category filters
 document.querySelectorAll(".filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
@@ -1128,18 +912,15 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
   });
 });
 
-// Search
 document.getElementById("searchBox").addEventListener("input", e => {
   searchQuery = e.target.value;
   renderList();
 });
 
-// Init
-(async () => {
-  await loadFromStorage();
-  renderList();
-  updateProgress();
-})();
+// =============================================
+// INIT
+// =============================================
+loadProgress();
 </script>
 </body>
 </html>
