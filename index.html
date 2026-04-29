@@ -987,31 +987,59 @@ let checked = new Set();
 let activeMonth = "all";
 let activeCat = "all";
 let searchQuery = "";
+let isSaving = false;
 
-function loadFromStorage() {
+async function loadFromStorage() {
   try {
-    const saved = localStorage.getItem("siapoteker_checked");
-    if (saved) checked = new Set(JSON.parse(saved));
-  } catch(e) {}
+    const result = await window.storage.get("siapoteker_checked");
+    if (result && result.value) {
+      checked = new Set(JSON.parse(result.value));
+    }
+  } catch(e) {
+    // Key not found or error — start fresh
+    checked = new Set();
+  }
 }
 
-function saveProgress() {
+async function saveProgress() {
+  if (isSaving) return;
+  isSaving = true;
+  const btn = document.getElementById("saveBtn");
+  btn.textContent = "⏳ Menyimpan...";
+  btn.style.opacity = "0.7";
   try {
-    localStorage.setItem("siapoteker_checked", JSON.stringify([...checked]));
+    await window.storage.set("siapoteker_checked", JSON.stringify([...checked]));
     const toast = document.getElementById("saveToast");
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 2500);
-  } catch(e) {}
+  } catch(e) {
+    const toast = document.getElementById("saveToast");
+    toast.textContent = "❌ Gagal menyimpan, coba lagi";
+    toast.style.borderColor = "var(--rose)";
+    toast.style.color = "var(--rose)";
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+      toast.textContent = "✅ Progress tersimpan!";
+      toast.style.borderColor = "var(--green)";
+      toast.style.color = "var(--green)";
+    }, 2500);
+  } finally {
+    isSaving = false;
+    btn.innerHTML = "💾 Simpan Progress";
+    btn.style.opacity = "1";
+  }
 }
 
-// Auto-save every 10s
-setInterval(saveProgress, 10000);
+// Auto-save every 30s
+setInterval(saveProgress, 30000);
 
-function toggleItem(day) {
+async function toggleItem(day) {
   if (checked.has(day)) checked.delete(day);
   else checked.add(day);
   renderList();
   updateProgress();
+  await saveProgress();
 }
 
 function updateProgress() {
@@ -1107,9 +1135,11 @@ document.getElementById("searchBox").addEventListener("input", e => {
 });
 
 // Init
-loadFromStorage();
-renderList();
-updateProgress();
+(async () => {
+  await loadFromStorage();
+  renderList();
+  updateProgress();
+})();
 </script>
 </body>
 </html>
