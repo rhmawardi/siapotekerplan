@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SiApoteker — Content Plan 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080d14;
+    --surface: #0f1620;
+    --surface2: #161f2e;
+    --surface3: #1c2a3a;
+    --border: #1e2d40;
+    --teal: #00e5c0;
+    --teal2: #00b89a;
+    --cyan: #36d9ff;
+    --purple: #9d7af7;
+    --amber: #f5b731;
+    --rose: #f05f7c;
+    --green: #4ade80;
+    --text: #e8f0fe;
+    --text2: #8ba4bf;
+    --text3: #4d6580;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* BACKGROUND MESH */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 10% 20%, rgba(0,229,192,0.05) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 90% 80%, rgba(54,217,255,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 50% 50%, rgba(157,122,247,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* HEADER */
+  header {
+    padding: 24px 0 0;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,13,20,0.9);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-avatar {
+    width: 46px; height: 46px;
+    background: linear-gradient(135deg, var(--teal), var(--cyan));
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+
+  .brand-name {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+
+  .brand-sub {
+    font-size: 12px;
+    color: var(--teal);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .comeback-badge {
+    background: linear-gradient(135deg, rgba(0,229,192,0.15), rgba(54,217,255,0.1));
+    border: 1px solid rgba(0,229,192,0.3);
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-family: 'Sora', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.5px;
+    animation: pulse-border 2s infinite;
+  }
+
+  @keyframes pulse-border {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0,229,192,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(0,229,192,0); }
+  }
+
+  /* STATS ROW */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    padding: 32px 0 28px;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .stat-card:hover { transform: translateY(-2px); border-color: var(--teal2); }
+
+  .stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,229,192,0.08), transparent 70%);
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text3);
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .stat-val {
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-val span { color: var(--teal); font-size: 14px; }
+  .stat-sub { font-size: 11px; color: var(--text3); }
+
+  /* PROGRESS SECTION */
+  .section { padding: 28px 0; border-bottom: 1px solid var(--border); }
+  .section-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text2);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::before {
+    content: '';
+    width: 3px; height: 14px;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+
+  .progress-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px 28px;
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .progress-count {
+    font-family: 'Sora', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1;
+  }
+
+  .progress-count span {
+    font-size: 18px;
+    color: var(--text3);
+    font-weight: 400;
+  }
+
+  .progress-pct {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .progress-bar-track {
+    height: 8px;
+    background: var(--surface3);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), var(--cyan));
+    border-radius: 100px;
+    transition: width 0.6s cubic-bezier(.4,0,.2,1);
+    width: 0%;
+  }
+
+  .month-mini-bars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .mini-bar-item { font-size: 12px; color: var(--text2); }
+  .mini-bar-label { margin-bottom: 5px; display: flex; justify-content: space-between; }
+  .mini-bar-track {
+    height: 4px; background: var(--surface3); border-radius: 10px; overflow: hidden;
+  }
+  .mini-bar-fill {
+    height: 100%; border-radius: 10px;
+    transition: width 0.5s ease;
+  }
+  .mini-bar-fill.may { background: var(--teal); }
+  .mini-bar-fill.june { background: var(--cyan); }
+  .mini-bar-fill.july { background: var(--purple); }
+
+  /* TOP CONTENT */
+  .top-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .top-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .top-card:hover { transform: translateY(-2px); }
+
+  .top-rank {
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text3);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .top-rank.gold { color: #f5b731; }
+  .top-rank.silver { color: #9ba8b8; }
+  .top-rank.bronze { color: #cd7c3a; }
+
+  .top-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .top-views {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .top-metrics {
+    display: flex;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--text3);
+  }
+
+  .metric-pill {
+    background: var(--surface2);
+    border-radius: 6px;
+    padding: 2px 7px;
+  }
+
+  /* FILTERS */
+  .filters-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+
+  .filter-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text2);
+    border-radius: 50px;
+    padding: 7px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: rgba(0,229,192,0.1);
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  /* MONTH TABS */
+  .month-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    background: var(--surface);
+    padding: 4px;
+    border-radius: 14px;
+    width: fit-content;
+    border: 1px solid var(--border);
+  }
+
+  .month-tab {
+    padding: 9px 24px;
+    border-radius: 10px;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text3);
+    border: none;
+    background: none;
+    position: relative;
+  }
+
+  .month-tab.active {
+    background: linear-gradient(135deg, var(--teal2), var(--teal));
+    color: var(--bg);
+  }
+
+  .tab-count {
+    position: absolute;
+    top: 4px; right: 4px;
+    width: 18px; height: 18px;
+    background: rgba(0,229,192,0.25);
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal);
+  }
+
+  .month-tab.active .tab-count {
+    background: rgba(8,13,20,0.3);
+    color: var(--bg);
+  }
+
+  /* CONTENT LIST */
+  .content-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .content-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .content-item:hover {
+    border-color: rgba(0,229,192,0.3);
+    background: var(--surface2);
+  }
+
+  .content-item.done {
+    opacity: 0.5;
+    border-color: rgba(74,222,128,0.3);
+    background: rgba(74,222,128,0.03);
+  }
+
+  .content-item.done .content-title {
+    text-decoration: line-through;
+    color: var(--text3);
+  }
+
+  .content-item.hidden { display: none; }
+
+  /* CHECKBOX */
+  .check-box {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border: 2px solid var(--border);
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    background: transparent;
+  }
+
+  .content-item:hover .check-box { border-color: var(--teal); }
+  .content-item.done .check-box {
+    background: var(--green);
+    border-color: var(--green);
+  }
+
+  .check-icon {
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: var(--bg);
+    font-size: 13px;
+  }
+
+  .content-item.done .check-icon { opacity: 1; }
+
+  /* DATE */
+  .date-badge {
+    flex-shrink: 0;
+    width: 44px;
+    text-align: center;
+  }
+
+  .date-day {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .date-month {
+    font-size: 10px;
+    color: var(--text3);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* CONTENT BODY */
+  .content-body { flex: 1; min-width: 0; }
+
+  .content-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .content-tags {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding: 3px 9px;
+    border-radius: 50px;
+    border: 1px solid;
+  }
+
+  .tag-obat { color: var(--teal); border-color: rgba(0,229,192,0.3); background: rgba(0,229,192,0.07); }
+  .tag-penyakit { color: var(--rose); border-color: rgba(240,95,124,0.3); background: rgba(240,95,124,0.07); }
+  .tag-bayi { color: var(--amber); border-color: rgba(245,183,49,0.3); background: rgba(245,183,49,0.07); }
+  .tag-suplemen { color: var(--green); border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.07); }
+  .tag-tips { color: var(--cyan); border-color: rgba(54,217,255,0.3); background: rgba(54,217,255,0.07); }
+  .tag-organ { color: var(--purple); border-color: rgba(157,122,247,0.3); background: rgba(157,122,247,0.07); }
+
+  .style-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 50px;
+    background: var(--surface3);
+    color: var(--text3);
+  }
+
+  /* DAY NUMBER */
+  .day-num {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: var(--surface3);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text3);
+  }
+
+  .content-item.done .day-num { background: rgba(74,222,128,0.1); color: var(--green); }
+
+  /* SAVE BUTTON */
+  .save-btn {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    background: linear-gradient(135deg, var(--teal), var(--cyan));
+    color: var(--bg);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 30px rgba(0,229,192,0.3);
+    transition: all 0.2s;
+    z-index: 200;
+  }
+
+  .save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0,229,192,0.4);
+  }
+
+  .save-toast {
+    position: fixed;
+    bottom: 90px; right: 28px;
+    background: var(--surface2);
+    border: 1px solid var(--green);
+    color: var(--green);
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 200;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  .save-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* INSIGHT BOX */
+  .insight-box {
+    background: linear-gradient(135deg, rgba(0,229,192,0.06), rgba(54,217,255,0.04));
+    border: 1px solid rgba(0,229,192,0.2);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+
+  .insight-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .insight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  .insight-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  /* SEARCH */
+  .search-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    width: 260px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-box:focus { border-color: var(--teal); }
+  .search-box::placeholder { color: var(--text3); }
+
+  .controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text3);
+    font-size: 14px;
+  }
+
+  @media (max-width: 640px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .top-grid { grid-template-columns: repeat(2, 1fr); }
+    .month-tabs { width: 100%; }
+    .month-tab { flex: 1; padding: 9px 10px; font-size: 12px; }
+    .search-box { width: 100%; }
+    .save-btn { bottom: 16px; right: 16px; padding: 12px 20px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-avatar">💊</div>
+        <div>
+          <div class="brand-name">@siapoteker</div>
+          <div class="brand-sub">SiApoteker | Animasi Edukasi Obat</div>
+        </div>
+      </div>
+      <div class="comeback-badge">🚀 COMEBACK 1 MEI 2025</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-label">Total Followers</div>
+      <div class="stat-val">105K</div>
+      <div class="stat-sub">Medical & Health</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Total Interaksi (30hr)</div>
+      <div class="stat-val">13<span>K</span></div>
+      <div class="stat-sub">702 Akun Engaged</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Top Views (Apr 9)</div>
+      <div class="stat-val">17<span>K</span></div>
+      <div class="stat-sub">Makan Sedikit, Tetap Gemuk</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Interaksi Reels</div>
+      <div class="stat-val">100<span>%</span></div>
+      <div class="stat-sub">Reels = Format Terbaik</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Konten Direncanakan</div>
+      <div class="stat-val">92<span> hari</div>
+      <div class="stat-sub">1 Mei – 31 Juli</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Waktu Aktif Terbaik</div>
+      <div class="stat-val">3<span>am</span></div>
+      <div class="stat-sub">43.4K aktif (Senin)</div>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="section">
+    <div class="section-title">Progress Comeback</div>
+    <div class="progress-block">
+      <div class="progress-meta">
+        <div>
+          <div class="progress-count" id="doneCount">0 <span>/ 92 konten</span></div>
+          <div style="font-size:12px;color:var(--text3);margin-top:4px;">Posting selesai</div>
+        </div>
+        <div class="progress-pct" id="donePct">0%</div>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="mainProgressBar"></div>
+      </div>
+      <div class="month-mini-bars">
+        <div class="mini-bar-item">
+          <div class="mini-bar-label"><span>Mei</span><span id="mayPct">0%</span></div>
+          <div class="mini-bar-track"><div class="mini-bar-fill may" id="mayBar"></div></div>
+        </div>
+        <div class="mini-bar-item">
+          <div class="mini-bar-label"><span>Juni</span><span id="junePct">0%</span></div>
+          <div class="mini-bar-track"><div class="mini-bar-fill june" id="juneBar"></div></div>
+        </div>
+        <div class="mini-bar-item">
+          <div class="mini-bar-label"><span>Juli</span><span id="julyPct">0%</span></div>
+          <div class="mini-bar-track"><div class="mini-bar-fill july" id="julyBar"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP PERFORMING CONTENT -->
+  <div class="section">
+    <div class="section-title">Top 5 Konten Sebelumnya (Benchmark)</div>
+    <div class="top-grid">
+      <div class="top-card">
+        <div class="top-rank gold">#1 — VIRAL</div>
+        <div class="top-title">STOP FITNAH KOLESTEROL</div>
+        <div class="top-views">1.2M</div>
+        <div class="top-metrics">
+          <span class="metric-pill">❤️ 78K</span>
+          <span class="metric-pill">🔗 12.2K</span>
+          <span class="metric-pill">🔖 29.8K</span>
+        </div>
+      </div>
+      <div class="top-card">
+        <div class="top-rank gold">#2</div>
+        <div class="top-title">Kasian Ginjalmu, Dia Lelah...</div>
+        <div class="top-views">935K</div>
+        <div class="top-metrics">
+          <span class="metric-pill">❤️ 49K</span>
+          <span class="metric-pill">🔗 5.6K</span>
+          <span class="metric-pill">🔖 14K</span>
+        </div>
+      </div>
+      <div class="top-card">
+        <div class="top-rank silver">#3</div>
+        <div class="top-title">Si Bakteri Baik yang Terusir</div>
+        <div class="top-views">515K</div>
+        <div class="top-metrics">
+          <span class="metric-pill">❤️ 33K</span>
+          <span class="metric-pill">🔗 4.1K</span>
+          <span class="metric-pill">🔖 6.9K</span>
+        </div>
+      </div>
+      <div class="top-card">
+        <div class="top-rank silver">#4</div>
+        <div class="top-title">Gula Banjir, Tapi Sel Kelaparan</div>
+        <div class="top-views">270K</div>
+        <div class="top-metrics">
+          <span class="metric-pill">❤️ 10.9K</span>
+          <span class="metric-pill">🔗 1.3K</span>
+          <span class="metric-pill">🔖 3.9K</span>
+        </div>
+      </div>
+      <div class="top-card">
+        <div class="top-rank bronze">#5</div>
+        <div class="top-title">Si Insulin yang Kewalahan</div>
+        <div class="top-views">268K</div>
+        <div class="top-metrics">
+          <span class="metric-pill">❤️ 14.6K</span>
+          <span class="metric-pill">🔗 1.5K</span>
+          <span class="metric-pill">🔖 5.6K</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT PLAN -->
+  <div class="section" style="border-bottom:none; padding-bottom: 100px;">
+    <div class="section-title">Rencana Konten 92 Hari</div>
+
+    <!-- INSIGHT BOX -->
+    <div class="insight-box">
+      <div class="insight-title">🧠 Insight dari Data Performa Kamu</div>
+      <div class="insight-grid">
+        <div class="insight-item"><div class="insight-dot"></div><div>Judul "STOP!" + konten obat = top performer (1.2M views)</div></div>
+        <div class="insight-item"><div class="insight-dot"></div><div>Personifikasi organ ("Kasian Ginjalmu...") sangat emosional & viral</div></div>
+        <div class="insight-item"><div class="insight-dot"></div><div>Storytelling mekanisme obat ("Si Insulin yang Kewalahan") terbukti work</div></div>
+        <div class="insight-item"><div class="insight-dot"></div><div>Konten ginjal, diabetes, kolesterol = topik favorit audiens kamu</div></div>
+        <div class="insight-item"><div class="insight-dot"></div><div>Non-followers menyumbang 57.3% interaksi = konten kamu sering viral</div></div>
+        <div class="insight-item"><div class="insight-dot"></div><div>Waktu posting terbaik: Senin pukul 03.00 WIB (43.4K aktif)</div></div>
+      </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls-row">
+      <div class="month-tabs">
+        <button class="month-tab active" data-month="all">Semua <span class="tab-count">92</span></button>
+        <button class="month-tab" data-month="mei">Mei <span class="tab-count">31</span></button>
+        <button class="month-tab" data-month="juni">Juni <span class="tab-count">30</span></button>
+        <button class="month-tab" data-month="juli">Juli <span class="tab-count">31</span></button>
+      </div>
+      <input class="search-box" type="text" placeholder="🔍  Cari judul konten..." id="searchBox">
+    </div>
+
+    <div class="filters-bar" id="filterBar">
+      <span style="font-size:12px;color:var(--text3);font-weight:500;">Filter:</span>
+      <button class="filter-btn active" data-cat="all">Semua</button>
+      <button class="filter-btn" data-cat="obat">💊 Obat</button>
+      <button class="filter-btn" data-cat="penyakit">🫀 Penyakit</button>
+      <button class="filter-btn" data-cat="bayi">👶 Bayi & Ibu</button>
+      <button class="filter-btn" data-cat="suplemen">🌿 Suplemen</button>
+      <button class="filter-btn" data-cat="tips">💡 Tips</button>
+      <button class="filter-btn" data-cat="organ">🧬 Organ</button>
+      <button class="filter-btn" data-cat="done" style="margin-left:auto">✅ Selesai</button>
+      <button class="filter-btn" data-cat="todo">⏳ Belum</button>
+    </div>
+
+    <div class="content-list" id="contentList"></div>
+    <div class="empty-state" id="emptyState" style="display:none">Tidak ada konten yang cocok 🙁</div>
+  </div>
+
+</div>
+
+<!-- SAVE BUTTON -->
+<button class="save-btn" id="saveBtn" onclick="saveProgress()">
+  💾 Simpan Progress
+</button>
+<div class="save-toast" id="saveToast">✅ Progress tersimpan!</div>
+
+<script>
+const CONTENT = [
+  // ====== MEI (31 hari) ======
+  { day: 1, date: "1 Mei", month: "mei", title: "STOP! Ini Alasan Jangan Pernah Campurkan Dua Obat Ini", cat: "obat", style: "STOP" },
+  { day: 2, date: "2 Mei", month: "mei", title: "Kenapa Ginjalmu Diam-diam Menangis Setiap Hari?", cat: "organ", style: "WHY" },
+  { day: 3, date: "3 Mei", month: "mei", title: "Fakta Mengejutkan: Kolesterol Tidak Selalu Musuh Tubuh", cat: "penyakit", style: "FAKTA" },
+  { day: 4, date: "4 Mei", month: "mei", title: "Cara Minum Obat yang 90% Orang Masih Salah", cat: "tips", style: "TIPS" },
+  { day: 5, date: "5 Mei", month: "mei", title: "Si Paracetamol: Teman Setia yang Sering Disalahgunakan", cat: "obat", style: "STORY" },
+  { day: 6, date: "6 Mei", month: "mei", title: "Kenapa Demam Sebenarnya adalah Temanmu, Bukan Musuh?", cat: "tips", style: "WHY" },
+  { day: 7, date: "7 Mei", month: "mei", title: "STOP! Jangan Pernah Kasih Obat Dewasa untuk Anak", cat: "bayi", style: "STOP" },
+  { day: 8, date: "8 Mei", month: "mei", title: "Kenapa Tekanan Darahmu Berbeda di Pagi dan Malam Hari?", cat: "penyakit", style: "WHY" },
+  { day: 9, date: "9 Mei", month: "mei", title: "Benarkah Vitamin C Dosis Tinggi Bisa Cegah Flu?", cat: "suplemen", style: "FAKTA" },
+  { day: 10, date: "10 Mei", month: "mei", title: "Ginjal: Mesin Filter 24 Jam yang Kamu Abaikan", cat: "organ", style: "STORY" },
+  { day: 11, date: "11 Mei", month: "mei", title: "Kenapa Antibiotik Tidak Mempan untuk Flu dan Batuk Biasa?", cat: "obat", style: "WHY" },
+  { day: 12, date: "12 Mei", month: "mei", title: "Cara Membaca Label Obat yang Benar (Banyak yang Salah!)", cat: "tips", style: "TIPS" },
+  { day: 13, date: "13 Mei", month: "mei", title: "STOP! Jangan Simpan Obat di Kamar Mandi — Ini Alasannya", cat: "obat", style: "STOP" },
+  { day: 14, date: "14 Mei", month: "mei", title: "Kenapa Pasien Diabetes Bisa Sangat Lapar Terus-menerus?", cat: "penyakit", style: "WHY" },
+  { day: 15, date: "15 Mei", month: "mei", title: "Si Insulin: Kunci Kecil yang Membuka Pintu Setiap Sel", cat: "penyakit", style: "STORY" },
+  { day: 16, date: "16 Mei", month: "mei", title: "Fakta: Obat Generik Sama Ampuhnya dengan Obat Paten", cat: "obat", style: "FAKTA" },
+  { day: 17, date: "17 Mei", month: "mei", title: "Kenapa Stres Bisa Bikin Tekanan Darah Tiba-tiba Naik?", cat: "penyakit", style: "WHY" },
+  { day: 18, date: "18 Mei", month: "mei", title: "Tanda-tanda Ginjalmu Minta Bantuan (Jangan Diabaikan!)", cat: "organ", style: "TIPS" },
+  { day: 19, date: "19 Mei", month: "mei", title: "STOP! Jangan Minum Obat Ini Sebelum Berkendara", cat: "obat", style: "STOP" },
+  { day: 20, date: "20 Mei", month: "mei", title: "Kenapa Perempuan Lebih Sering Mengalami Anemia?", cat: "tips", style: "WHY" },
+  { day: 21, date: "21 Mei", month: "mei", title: "Lemak Visceral: Si Diam di Perutmu yang Paling Berbahaya", cat: "penyakit", style: "STORY" },
+  { day: 22, date: "22 Mei", month: "mei", title: "Benarkah Suplemen Vitamin Harus Diminum Setiap Hari?", cat: "suplemen", style: "FAKTA" },
+  { day: 23, date: "23 Mei", month: "mei", title: "Kenapa Bayi Lebih Mudah Sakit dibanding Orang Dewasa?", cat: "bayi", style: "WHY" },
+  { day: 24, date: "24 Mei", month: "mei", title: "STOP! Ini Obat yang Tidak Boleh Dihancurkan atau Dibelah", cat: "obat", style: "STOP" },
+  { day: 25, date: "25 Mei", month: "mei", title: "Kenapa Batuk Kronis Harus Segera Diperiksakan ke Dokter?", cat: "tips", style: "WHY" },
+  { day: 26, date: "26 Mei", month: "mei", title: "Probiotik: Pasukan Khusus yang Menjaga Ususmu", cat: "tips", style: "STORY" },
+  { day: 27, date: "27 Mei", month: "mei", title: "Fakta: Demam Tinggi Tidak Selalu Perlu Obat Penurun Panas", cat: "tips", style: "FAKTA" },
+  { day: 28, date: "28 Mei", month: "mei", title: "Kenapa Asam Folat Wajib Dikonsumsi Ibu Sebelum Hamil?", cat: "bayi", style: "WHY" },
+  { day: 29, date: "29 Mei", month: "mei", title: "Kenapa Kafein Bikin Jantung Deg-degan dan Susah Tidur?", cat: "tips", style: "WHY" },
+  { day: 30, date: "30 Mei", month: "mei", title: "Magnesium: Mineral yang Paling Sering Terlupakan Tubuhmu", cat: "suplemen", style: "STORY" },
+  { day: 31, date: "31 Mei", month: "mei", title: "STOP! Jangan Minum Obat Ini Bareng Teh atau Susu", cat: "obat", style: "STOP" },
+
+  // ====== JUNI (30 hari) ======
+  { day: 32, date: "1 Jun", month: "juni", title: "STOP! Jangan Campurkan Suplemen Ini dengan Obat Jantung", cat: "suplemen", style: "STOP" },
+  { day: 33, date: "2 Jun", month: "juni", title: "Kenapa Kolesterol Jahat Bisa Menyumbat Pembuluh Darah?", cat: "penyakit", style: "WHY" },
+  { day: 34, date: "3 Jun", month: "juni", title: "Hati (Liver): Laboratorium Terbesar di Dalam Tubuhmu", cat: "organ", style: "STORY" },
+  { day: 35, date: "4 Jun", month: "juni", title: "Benarkah Minum Susu Bisa Menetralisir Efek Racun Obat?", cat: "obat", style: "FAKTA" },
+  { day: 36, date: "5 Jun", month: "juni", title: "Kenapa Obat Antidepresan Butuh Waktu Lama untuk Mempan?", cat: "obat", style: "WHY" },
+  { day: 37, date: "6 Jun", month: "juni", title: "5 Cara Menjaga Kesehatan Liver Secara Alami Setiap Hari", cat: "organ", style: "TIPS" },
+  { day: 38, date: "7 Jun", month: "juni", title: "STOP! Ini Bahaya Minum Obat Penghilang Nyeri Terlalu Sering", cat: "obat", style: "STOP" },
+  { day: 39, date: "8 Jun", month: "juni", title: "Kenapa Luka pada Pasien Diabetes Susah Sekali Sembuh?", cat: "penyakit", style: "WHY" },
+  { day: 40, date: "9 Jun", month: "juni", title: "Tiroid: Kondakter Metabolisme yang Sering Tidak Terdeteksi", cat: "organ", style: "STORY" },
+  { day: 41, date: "10 Jun", month: "juni", title: "Fakta: Jus Grapefruit Bisa Ubah Drastis Efek Obatmu!", cat: "obat", style: "FAKTA" },
+  { day: 42, date: "11 Jun", month: "juni", title: "Kenapa Anak Bisa Kejang Saat Demam Tinggi? Ini Penjelasannya", cat: "bayi", style: "WHY" },
+  { day: 43, date: "12 Jun", month: "juni", title: "Omega-3: Lebih Bermanfaat dari Sekedar Minyak Ikan Biasa", cat: "suplemen", style: "STORY" },
+  { day: 44, date: "13 Jun", month: "juni", title: "STOP! Cara Benar Hentikan Obat yang Sering Disalahpahami", cat: "obat", style: "STOP" },
+  { day: 45, date: "14 Jun", month: "juni", title: "Kenapa Sakit Kepala Muncul Setelah Berhenti Minum Kopi?", cat: "tips", style: "WHY" },
+  { day: 46, date: "15 Jun", month: "juni", title: "Pankreas: Organ Tersembunyi yang Atur Nasib Gula Darahmu", cat: "organ", style: "STORY" },
+  { day: 47, date: "16 Jun", month: "juni", title: "Benarkah Vitamin D Hanya Bisa Didapat dari Sinar Matahari?", cat: "suplemen", style: "FAKTA" },
+  { day: 48, date: "17 Jun", month: "juni", title: "Kenapa Gula Darah Bisa Naik Padahal Tidak Makan Manis?", cat: "penyakit", style: "WHY" },
+  { day: 49, date: "18 Jun", month: "juni", title: "Zinc: Si Mineral Kecil yang Paling Penting untuk Imunitas", cat: "suplemen", style: "TIPS" },
+  { day: 50, date: "19 Jun", month: "juni", title: "STOP! Jangan Pernah Berikan Madu untuk Bayi di Bawah 1 Tahun", cat: "bayi", style: "STOP" },
+  { day: 51, date: "20 Jun", month: "juni", title: "Si Kortisol: Hormon Stres yang Diam-diam Bikin Gemuk", cat: "tips", style: "STORY" },
+  { day: 52, date: "21 Jun", month: "juni", title: "Fakta: Tidak Semua Suplemen Kalium Aman untuk Jantungmu", cat: "suplemen", style: "FAKTA" },
+  { day: 53, date: "22 Jun", month: "juni", title: "Kenapa Antibiotik Benar-benar Harus Dihabiskan? Ini Alasannya", cat: "obat", style: "WHY" },
+  { day: 54, date: "23 Jun", month: "juni", title: "Cara Membaca Hasil Lab Darah yang Perlu Semua Orang Tahu", cat: "tips", style: "TIPS" },
+  { day: 55, date: "24 Jun", month: "juni", title: "STOP! Obat Ini Tidak Boleh Diminum dengan Air Dingin", cat: "obat", style: "STOP" },
+  { day: 56, date: "25 Jun", month: "juni", title: "Kenapa Penyakit Autoimun Lebih Sering Menyerang Wanita?", cat: "penyakit", style: "WHY" },
+  { day: 57, date: "26 Jun", month: "juni", title: "Cara Kerja Vaksin di Dalam Tubuh (Penjelasan Animasi)", cat: "tips", style: "STORY" },
+  { day: 58, date: "27 Jun", month: "juni", title: "Kenapa Makan Terlalu Malam Bisa Bikin Berat Badan Naik?", cat: "tips", style: "WHY" },
+  { day: 59, date: "28 Jun", month: "juni", title: "Tanda Hati (Liver) Kamu Sedang Butuh Pertolongan", cat: "organ", style: "TIPS" },
+  { day: 60, date: "29 Jun", month: "juni", title: "Benarkah Suplemen Bisa Menggantikan Makanan Sehat?", cat: "suplemen", style: "FAKTA" },
+  { day: 61, date: "30 Jun", month: "juni", title: "STOP! Jangan Sembarangan Beli Obat Tetes Mata Online", cat: "obat", style: "STOP" },
+
+  // ====== JULI (31 hari) ======
+  { day: 62, date: "1 Jul", month: "juli", title: "Kenapa Efek Samping Obat Maag Jarang Dibahas Dokter?", cat: "obat", style: "WHY" },
+  { day: 63, date: "2 Jul", month: "juli", title: "Si Melatonin: Hormon Tidur yang Paling Banyak Disalahpahami", cat: "tips", style: "STORY" },
+  { day: 64, date: "3 Jul", month: "juli", title: "STOP! Jangan Konsumsi Suplemen Ini Saat Hamil Tanpa Saran Dokter", cat: "bayi", style: "STOP" },
+  { day: 65, date: "4 Jul", month: "juli", title: "Alergi vs Intoleransi Makanan: Beda Banget, Banyak yang Keliru", cat: "penyakit", style: "FAKTA" },
+  { day: 66, date: "5 Jul", month: "juli", title: "Kenapa Perokok Aktif Butuh Dosis Obat yang Lebih Tinggi?", cat: "tips", style: "WHY" },
+  { day: 67, date: "6 Jul", month: "juli", title: "Jantung Sehat = Otak Sehat: Ini Hubungan yang Sering Diabaikan", cat: "organ", style: "STORY" },
+  { day: 68, date: "7 Jul", month: "juli", title: "Kenapa Darah Rendah Juga Bisa Berbahaya, Bukan Hanya Darah Tinggi?", cat: "penyakit", style: "WHY" },
+  { day: 69, date: "8 Jul", month: "juli", title: "Cara Kerja Obat Anti-Nyeri di Dalam Otak (Animasi Detail)", cat: "obat", style: "STORY" },
+  { day: 70, date: "9 Jul", month: "juli", title: "STOP! Obat Ini Sangat Berbahaya Jika Diminum Saat Perut Kosong", cat: "obat", style: "STOP" },
+  { day: 71, date: "10 Jul", month: "juli", title: "Protein: Bukan Cuma untuk Binaragawan, Ini Fungsi Sebenarnya", cat: "tips", style: "FAKTA" },
+  { day: 72, date: "11 Jul", month: "juli", title: "Benarkah Obat Batuk Bisa Bikin Anak Susah Tidur di Malam Hari?", cat: "bayi", style: "FAKTA" },
+  { day: 73, date: "12 Jul", month: "juli", title: "Kenapa Hemoglobin Rendah Bikin Badan Sangat Cepat Lelah?", cat: "tips", style: "WHY" },
+  { day: 74, date: "13 Jul", month: "juli", title: "Si Serotonin: Hormon Bahagia yang Bisa Kamu Optimalkan", cat: "tips", style: "STORY" },
+  { day: 75, date: "14 Jul", month: "juli", title: "STOP! Ini Tanda Bahaya Interaksi Obat yang Sering Diabaikan", cat: "obat", style: "STOP" },
+  { day: 76, date: "15 Jul", month: "juli", title: "Panduan Lengkap Membaca Label Suplemen yang Banyak Tipuannya", cat: "suplemen", style: "TIPS" },
+  { day: 77, date: "16 Jul", month: "juli", title: "Kenapa Minum Air Putih yang Cukup Sangat Bantu Kerja Ginjal?", cat: "organ", style: "WHY" },
+  { day: 78, date: "17 Jul", month: "juli", title: "Fakta: Herbal Tidak Selalu Lebih Aman dari Obat Kimia", cat: "obat", style: "FAKTA" },
+  { day: 79, date: "18 Jul", month: "juli", title: "Kenapa Kanker Bisa Jadi Resisten terhadap Kemoterapi?", cat: "penyakit", style: "WHY" },
+  { day: 80, date: "19 Jul", month: "juli", title: "STOP! Jangan Berikan Obat Ini kepada Lansia Tanpa Konsultasi", cat: "obat", style: "STOP" },
+  { day: 81, date: "20 Jul", month: "juli", title: "Kenapa Obat Harus Diminum Tepat Waktu? Ini Penjelasan Ilmiahnya", cat: "obat", style: "WHY" },
+  { day: 82, date: "21 Jul", month: "juli", title: "Limpa: Prajurit Imun Terkuat yang Tidak Pernah Terlihat", cat: "organ", style: "STORY" },
+  { day: 83, date: "22 Jul", month: "juli", title: "5 Cara Menjaga Kesehatan Ginjal yang Bisa Dilakukan Setiap Hari", cat: "organ", style: "TIPS" },
+  { day: 84, date: "23 Jul", month: "juli", title: "STOP! Ini Bahaya Nyata Minum Obat Nyeri Lebih dari 3 Hari", cat: "obat", style: "STOP" },
+  { day: 85, date: "24 Jul", month: "juli", title: "Kenapa Anak Sulit Minum Obat? Dan Cara Mudah Mengatasinya", cat: "bayi", style: "TIPS" },
+  { day: 86, date: "25 Jul", month: "juli", title: "Kulit: Benteng Pertahanan Pertama Tubuhmu yang Sering Dilupakan", cat: "organ", style: "STORY" },
+  { day: 87, date: "26 Jul", month: "juli", title: "Panduan Suplemen Harian yang Tepat untuk Dewasa Aktif", cat: "suplemen", style: "TIPS" },
+  { day: 88, date: "27 Jul", month: "juli", title: "Kenapa Rambut Rontok Berlebihan Bisa Jadi Tanda Penyakit Serius?", cat: "tips", style: "WHY" },
+  { day: 89, date: "28 Jul", month: "juli", title: "STOP! Ini Efek Samping Obat Tidur yang Wajib Kamu Ketahui", cat: "obat", style: "STOP" },
+  { day: 90, date: "29 Jul", month: "juli", title: "Kenapa Orang dengan Diabetes Lebih Rentan Infeksi Bakteri?", cat: "penyakit", style: "WHY" },
+  { day: 91, date: "30 Jul", month: "juli", title: "Si Kortisol vs Adrenalin: Dua Hormon Stres yang Berbeda Efeknya", cat: "tips", style: "STORY" },
+  { day: 92, date: "31 Jul", month: "juli", title: "🎉 3 Bulan Konsisten! Recap Ilmu Farmasi dan Pencapaian Kita", cat: "tips", style: "RECAP" },
+];
+
+const CAT_LABELS = {
+  obat: { label: "💊 Obat", cls: "tag-obat" },
+  penyakit: { label: "🫀 Penyakit", cls: "tag-penyakit" },
+  bayi: { label: "👶 Bayi & Ibu", cls: "tag-bayi" },
+  suplemen: { label: "🌿 Suplemen", cls: "tag-suplemen" },
+  tips: { label: "💡 Tips", cls: "tag-tips" },
+  organ: { label: "🧬 Organ", cls: "tag-organ" },
+};
+
+const STYLE_LABELS = {
+  STOP: "🚫 STOP!",
+  WHY: "❓ Kenapa",
+  STORY: "📖 Storytelling",
+  FAKTA: "💡 Fakta",
+  TIPS: "📋 Tips",
+  RECAP: "🎉 Recap",
+};
+
+let checked = new Set();
+let activeMonth = "all";
+let activeCat = "all";
+let searchQuery = "";
+
+function loadFromStorage() {
+  try {
+    const saved = localStorage.getItem("siapoteker_checked");
+    if (saved) checked = new Set(JSON.parse(saved));
+  } catch(e) {}
+}
+
+function saveProgress() {
+  try {
+    localStorage.setItem("siapoteker_checked", JSON.stringify([...checked]));
+    const toast = document.getElementById("saveToast");
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2500);
+  } catch(e) {}
+}
+
+// Auto-save every 10s
+setInterval(saveProgress, 10000);
+
+function toggleItem(day) {
+  if (checked.has(day)) checked.delete(day);
+  else checked.add(day);
+  renderList();
+  updateProgress();
+}
+
+function updateProgress() {
+  const total = CONTENT.length;
+  const done = checked.size;
+  const pct = total ? Math.round(done / total * 100) : 0;
+
+  document.getElementById("doneCount").innerHTML = `${done} <span>/ ${total} konten</span>`;
+  document.getElementById("donePct").textContent = `${pct}%`;
+  document.getElementById("mainProgressBar").style.width = pct + "%";
+
+  const months = ["mei","juni","juli"];
+  const totals = [31, 30, 31];
+  const ids = [["mayPct","mayBar"], ["junePct","juneBar"], ["julyPct","julyBar"]];
+
+  months.forEach((m, i) => {
+    const monthItems = CONTENT.filter(c => c.month === m);
+    const monthDone = monthItems.filter(c => checked.has(c.day)).length;
+    const mp = totals[i] ? Math.round(monthDone / totals[i] * 100) : 0;
+    document.getElementById(ids[i][0]).textContent = `${monthDone}/${totals[i]}`;
+    document.getElementById(ids[i][1]).style.width = mp + "%";
+  });
+}
+
+function renderList() {
+  const list = document.getElementById("contentList");
+  list.innerHTML = "";
+  let visible = 0;
+
+  CONTENT.forEach(item => {
+    const isDone = checked.has(item.day);
+    const monthMatch = activeMonth === "all" || item.month === activeMonth;
+    const catMatch = activeCat === "all" ||
+      activeCat === item.cat ||
+      (activeCat === "done" && isDone) ||
+      (activeCat === "todo" && !isDone);
+    const q = searchQuery.trim().toLowerCase();
+    const searchMatch = !q || item.title.toLowerCase().includes(q);
+
+    const el = document.createElement("div");
+    el.className = "content-item" + (isDone ? " done" : "") + (!monthMatch || !catMatch || !searchMatch ? " hidden" : "");
+    if (monthMatch && catMatch && searchMatch) visible++;
+
+    const cat = CAT_LABELS[item.cat] || { label: item.cat, cls: "" };
+
+    el.innerHTML = `
+      <div class="check-box"><span class="check-icon">✓</span></div>
+      <div class="date-badge">
+        <div class="date-day">${item.date.split(" ")[0]}</div>
+        <div class="date-month">${item.date.split(" ")[1]}</div>
+      </div>
+      <div class="content-body">
+        <div class="content-title">${item.title}</div>
+        <div class="content-tags">
+          <span class="tag ${cat.cls}">${cat.label}</span>
+          <span class="style-badge">${STYLE_LABELS[item.style] || item.style}</span>
+        </div>
+      </div>
+      <div class="day-num">#${item.day}</div>
+    `;
+
+    el.addEventListener("click", () => toggleItem(item.day));
+    list.appendChild(el);
+  });
+
+  document.getElementById("emptyState").style.display = visible === 0 ? "block" : "none";
+}
+
+// Month tabs
+document.querySelectorAll(".month-tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".month-tab").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeMonth = btn.dataset.month;
+    renderList();
+  });
+});
+
+// Category filters
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeCat = btn.dataset.cat;
+    renderList();
+  });
+});
+
+// Search
+document.getElementById("searchBox").addEventListener("input", e => {
+  searchQuery = e.target.value;
+  renderList();
+});
+
+// Init
+loadFromStorage();
+renderList();
+updateProgress();
+</script>
+</body>
+</html>
